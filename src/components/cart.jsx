@@ -24,6 +24,10 @@ class Cart extends Component {
     return (
       <div className="cartContainer">
         <aside>
+          <div className="logo">
+            <i class="fas fa-shopping-cart fa-3x"></i>
+            <h2>Basket</h2>
+          </div>
           {this.props.orders.map((order, index) => {
             return <Cards className="card" order={order} key={index} />;
           })}

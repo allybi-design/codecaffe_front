@@ -20,39 +20,39 @@ const CoffeeTypes = props => {
           <div className="coffeeIcons">
             <div className="cupSize">
               <i className="fas fa-coffee "></i>
-              <label>Small (£2.20)</label>
+              <label>Small ({props.data.size1})</label>
               <div>
                 <input
                   name="sizeButton"
                   type="radio"
                   onChange={() =>
-                    props.clickSizePriceHandler(props.data.type, "Small", 2.5)
+                    props.clickSizePriceHandler(props.data.type, "Small", props.data.size1)
                   }
                 />
               </div>
             </div>
             <div className="cupSize">
               <i className="fas fa-coffee fa-2x"></i>
-              <label>Medium (£2.50)</label>
+              <label>Medium ({props.data.size2})</label>
               <div>
                 <input
                   name="sizeButton"
                   type="radio"
                   onChange={() =>
-                    props.clickSizePriceHandler(props.data.type, "Medium", 2.75)
+                    props.clickSizePriceHandler(props.data.type, "Medium", props.data.size2)
                   }
                 />
               </div>
             </div>
             <div className="cupSize">
               <i className="fas fa-coffee fa-3x"></i>
-              <label>Large (£2.60)</label>
+              <label>Large ({props.data.size3})</label>
               <div>
                 <input
                   name="sizeButton"
                   type="radio"
                   onChange={() =>
-                    props.clickSizePriceHandler(props.data.type, "Large", 2.95)
+                    props.clickSizePriceHandler(props.data.type, "Large", props.data.size3)
                   }
                 />
               </div>

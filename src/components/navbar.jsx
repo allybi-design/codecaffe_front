@@ -1,5 +1,5 @@
 import React from 'react';
-// import image from "../../public/images/coffeeLogo.png";
+
 import '../styles/navbar.css'
 
 class Navbar extends React.Component {
@@ -8,7 +8,7 @@ class Navbar extends React.Component {
       <div className="navbar">
         <div id="logoheader">
           <div id="logo">
-            {/* <img id="logoText" src={image} alt="Coffee logo" height="145px" width="200px"/> */}
+            <img id="logoText" src="images/coffeeLogo.png" alt="Coffee logo" height="145px" width="200px"/>
           </div>
  
           <div id="title">
