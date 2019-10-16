@@ -1,0 +1,52 @@
+.navbar {
+  background-color: #6D1F37;
+  border-bottom: 0.05rem solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  align-items: baseline;
+ }
+ 
+ h1 {
+  font-size: 5rem;
+  color: rgb(230, 156, 21);
+  padding-left: 20rem;
+  padding-bottom: 3rem;
+ }
+ 
+ #logoheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 3rem;
+ }
+ 
+ #buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-content: space-between;
+ }
+ 
+ button {
+  align-content: center;
+  font-size: 1.5rem;
+  background-color: #6D1F37;
+  font-weight: bold;
+  border: none;
+  color: #e69c15;
+ }
+ 
+ 
+ #logoText {
+  display: flex;
+  vertical-align: bottom;
+ }
+ 
+ @media screen and (max-width: 800px) {
+  #search {display: none;
+  }
+ }

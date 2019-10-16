@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.coffeeCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

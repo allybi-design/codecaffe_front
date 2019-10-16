@@ -1,0 +1,134 @@
+[
+	{
+		"type": "Latte",
+		"image": "latte.jpeg",
+		"description": "Also called a café latte, this drink is a single shot of espresso with three parts steamed milk. It is usually bigger than a cappuccino because it contains more milk and can be ordered with flavouring – usually vanilla, hazelnut or caramel.",
+		"size":[ 
+			"2.50", 
+			"2.75", 
+			"2.99"
+		],
+		"caffeine": false,
+		"milkType": [
+			"Full",
+			"Semi",
+			"Goat",
+			"Soya"
+		]
+	},
+	{
+		"type": "Cappuccino",
+		"image": "cappuccino.jpg",
+		"description": "Equal parts espresso, steamed milk and foamed milk. Usually served straight up without any flavoring, but the foam is often sprinkled with powdered chocolate or cinnamon.",
+		"size": [
+			{
+				"Small": 2.5
+			},
+			{
+				"Medium": 2.75
+			},
+			{
+				"Large": 2.99
+			}
+		],
+		"caffeine": false,
+		"milkType": [
+			"Full",
+			"Semi",
+			"Goat",
+			"Soya"
+		]
+	},
+	{
+		"type": "Americano",
+		"image": "americano.jpg",
+		"description": "A single shot of espresso added to a cup of hot water. Many like to drink this as they would a regular brewed coffee with milk and sugar. Purists say to keep milk to a minimum to get the most flavor from the espresso.",
+		"size": [
+			{
+				"Small": 2.5
+			},
+			{
+				"Medium": 2.75
+			},
+			{
+				"Large": 2.99
+			}
+		],
+		"caffeine": false,
+		"milkType": [
+			"Full",
+			"Semi",
+			"Goat",
+			"Soya"
+		]
+	},
+	{
+		"type": "Mocha",
+		"image": "mocha.jpg",
+		"description": "Also called a café mocha, this drink is widely varied depending on the coffeehouse making it. Our Mocha is espresso, steamed milk, chocolate syrup and whipped cream.",
+		"size": [
+			{
+				"Small": 2.5
+			},
+			{
+				"Medium": 2.75
+			},
+			{
+				"Large": 2.99
+			}
+		],
+		"caffeine": false,
+		"milkType": [
+			"Full",
+			"Semi",
+			"Goat",
+			"Soya"
+		]
+	},
+	{
+		"type": "Espresso",
+		"image": "espresso.jpg",
+		"description": "A strong, concentrated coffee made by forcing pressurized water through finely ground coffee beans. Served in a small cup called a demitasse, and meant to be taken quickly, like a shot.",
+		"size": [
+			{
+				"Small": 2.5
+			},
+			{
+				"Medium": 2.75
+			},
+			{
+				"Large": 2.99
+			}
+		],
+		"caffeine": false,
+		"milkType": [
+			"Full",
+			"Semi",
+			"Goat",
+			"Soya"
+		]
+	},
+	{
+		"type": "Macchiato",
+		"image": "macchiato.jpeg",
+		"description": "Espresso with either steamed milk or foamed milk (depending on the coffeehouse), and flavoring. The most common combination is the caramel macchiato – espresso, vanilla, steamed milk, drizzled with caramel.",
+		"size": [
+			{
+				"Small": 2.5
+			},
+			{
+				"Medium": 2.75
+			},
+			{
+				"Large": 2.99
+			}
+		],
+		"caffeine": false,
+		"milkType": [
+			"Full",
+			"Semi",
+			"Goat",
+			"Soya"
+		]
+	}
+]
