@@ -1,0 +1,24 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container .table {
+  margin: 2rem;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.container td,
+.container th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.container tr:nth-child(even) {
+  background-color: #dddddd;
+}
+/*# sourceMappingURL=BarristerView.css.map */

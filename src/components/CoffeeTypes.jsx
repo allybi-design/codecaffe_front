@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/CoffeeTypes.css";
 
 const CoffeeTypes = props => {
+
   return (
     <div className="chooseCoffee">
       <div className="headerAndImage">
@@ -20,39 +21,51 @@ const CoffeeTypes = props => {
           <div className="coffeeIcons">
             <div className="cupSize">
               <i className="fas fa-coffee "></i>
-              <label>Small ({props.data.size1})</label>
+              <label>Small ({props.data.size[0]})</label>
               <div>
                 <input
                   name="sizeButton"
                   type="radio"
                   onChange={() =>
-                    props.clickSizePriceHandler(props.data.type, "Small", props.data.size1)
+                    props.clickSizePriceHandler(
+                      props.data.type,
+                      "Small",
+                      props.data.size[0]
+                    )
                   }
                 />
               </div>
             </div>
             <div className="cupSize">
               <i className="fas fa-coffee fa-2x"></i>
-              <label>Medium ({props.data.size2})</label>
+              <label>Medium ({props.data.size[1]})</label>
               <div>
                 <input
                   name="sizeButton"
                   type="radio"
                   onChange={() =>
-                    props.clickSizePriceHandler(props.data.type, "Medium", props.data.size2)
+                    props.clickSizePriceHandler(
+                      props.data.type,
+                      "Medium",
+                      props.data.size[1]
+                    )
                   }
                 />
               </div>
             </div>
             <div className="cupSize">
               <i className="fas fa-coffee fa-3x"></i>
-              <label>Large ({props.data.size3})</label>
+              <label>Large ({props.data.size[2]})</label>
               <div>
                 <input
                   name="sizeButton"
                   type="radio"
                   onChange={() =>
-                    props.clickSizePriceHandler(props.data.type, "Large", props.data.size3)
+                    props.clickSizePriceHandler(
+                      props.data.type,
+                      "Large",
+                      props.data.size[2]
+                    )
                   }
                 />
               </div>
@@ -64,7 +77,7 @@ const CoffeeTypes = props => {
           <label>Decaf</label>
           <div className="coffeeIcons">
             <div className="">
-              <i className="fas fa-bed fa-3x"></i>
+              <i className="fas fa-bed fa-2x"></i>
               <div>
                 <input
                   name="decafButton"

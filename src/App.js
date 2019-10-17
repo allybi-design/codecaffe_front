@@ -1,16 +1,47 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 // compoonents
-import Navbar from "./components/navbar.jsx";
+import Navbar from "./components/navbar";
 import Footer from "./components/footer.jsx";
 import Cart from "./components/cart.jsx";
 
-import CoffeeCards from "./components/CoffeeTypes.jsx";
-//styles
+// views
+import Home from "./components/Index";
+import Location from "./components/location";
+import Login from "./components/login";
+
+import BarristerView from "./components/BarristerView.jsx";
+import Spill from "./components/spill";
+import Loyalty from "./components/loyalty";
+
+// styles
 import "./styles/App.css";
 
-// import assets
-import coffeeTypes from "./coffees.json";
+function NavLinks() {
+  return (
+    <nav className="navbar">
+      <Link id="navbar_btn" to="/">
+        Order a Coffee
+      </Link>
+      <Link className="navbar_btn" to="/loyalty">
+        Loyalty
+      </Link>
+      <Link className="navbar_btn" to="/location">
+        Location
+      </Link>
+      <Link className="navbar_btn" to="/spill">
+        Spill the Beans
+      </Link>
+      <Link className="navbar_btn" to="/barrista">
+        Barrista View
+      </Link>
+      <Link className="navbar_btn" to="/login">
+        Sign In / Register
+      </Link>
+    </nav>
+  );
+}
 
 export default class App extends Component {
   state = {
@@ -64,6 +95,7 @@ export default class App extends Component {
     this.setState({
       orders: [...this.state.orders, this.state.coffee]
     });
+
     this.setState({
       coffee: {
         name: "",
@@ -73,78 +105,45 @@ export default class App extends Component {
         milk: ""
       }
     });
-    console.log("Added to cart");
   };
 
   render() {
     return (
-      <div>
+      <Router>
         <Navbar />
-        <div className="main">
-          <div className="coffeeCards">
-            <CoffeeCards
-              data={coffeeTypes[0]}
-              clickSizePriceHandler={this.clickSizePriceHandler}
-              clickDecafHandler={this.clickDecafHandler}
-              clickMilkHandler={this.clickMilkHandler}
-              coffeeOrder={this.state.coffee}
-              onAddToCart={this.onAddToCart}
-            />
-            <CoffeeCards
-              data={coffeeTypes[1]}
-              clickSizePriceHandler={this.clickSizePriceHandler}
-              clickDecafHandler={this.clickDecafHandler}
-              clickMilkHandler={this.clickMilkHandler}
-              coffeeOrder={this.state.coffee}
-              onAddToCart={this.onAddToCart}
-            />
-            <CoffeeCards
-              data={coffeeTypes[2]}
-              clickSizePriceHandler={this.clickSizePriceHandler}
-              clickDecafHandler={this.clickDecafHandler}
-              clickMilkHandler={this.clickMilkHandler}
-              coffeeOrder={this.state.coffee}
-              onAddToCart={this.onAddToCart}
-            />
-            <CoffeeCards
-              data={coffeeTypes[3]}
-              clickSizePriceHandler={this.clickSizePriceHandler}
-              clickDecafHandler={this.clickDecafHandler}
-              clickMilkHandler={this.clickMilkHandler}
-              coffeeOrder={this.state.coffee}
-              onAddToCart={this.onAddToCart}
-            />
-            <CoffeeCards
-              data={coffeeTypes[4]}
-              clickSizePriceHandler={this.clickSizePriceHandler}
-              clickDecafHandler={this.clickDecafHandler}
-              clickMilkHandler={this.clickMilkHandler}
-              coffeeOrder={this.state.coffee}
-              onAddToCart={this.onAddToCart}
-            />
-            <CoffeeCards
-              data={coffeeTypes[5]}
-              clickSizePriceHandler={this.clickSizePriceHandler}
-              clickDecafHandler={this.clickDecafHandler}
-              clickMilkHandler={this.clickMilkHandler}
-              coffeeOrder={this.state.coffee}
-              onAddToCart={this.onAddToCart}
-            />
-          </div>
-          <Cart orders={this.state.orders} />
-        </div>
+        <NavLinks />
+
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+                clickSubmitHandler={this.clickSubmitHandler}
+                clickSizePriceHandler={this.clickSizePriceHandler}
+                clickDecafHandler={this.clickDecafHandler}
+                clickMilkHandler={this.clickMilkHandler}
+                onAddToCart={this.onAddToCart}
+                coffeeOrder={this.state.coffee}
+                orders={this.state.orders}
+              />
+            )}
+          />
+
+          <Route path="/loyalty" component={Loyalty} />
+          
+          <Route path="/location" component={Location} />
+         
+          <Route path="/spill" component={Spill} />
+          
+          <Route path="/barrista" component={BarristerView} />
+
+          <Route path="/login" component={Login} />
+          
+        </Switch>
 
         <Footer />
-      </div>
+      </Router>
     );
   }
 }
-
-//// remove before production
-//  {
-// name: "Americanno",
-// size: "Medium",
-// price: "2.99",
-// decaf: "true",
-// milk: "Full"
-// }

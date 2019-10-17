@@ -1,0 +1,16 @@
+
+.locationPage {
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    border-color: #000000;
+    padding: none;
+    margin: none;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.phoneNumber, .address, .email {
+    color: rgb(0, 0, 0);
+}

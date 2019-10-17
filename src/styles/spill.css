@@ -1,0 +1,45 @@
+
+
+header {
+    font-family: sans-serif;
+    font-size: 4vh;
+    color:#6D1F37;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1vh;
+    padding: 0.1vh;
+    }
+    
+     .Image2 {
+padding: 0.2vh;
+text-align: center;
+}
+    
+ img {
+border-style: solid;
+padding: 0.2vh;
+margin: 0.1vh;
+}
+
+ .beansAndImage {
+width: 30%;
+background-color: #F4F3EF;
+min-height: 25%;
+display: flex;
+flex-direction: column;
+font-size: 2vh;
+color: #404042;
+border-style: solid;
+border-width: 3px;
+border-color: #404042;
+padding-right:  1vh;
+padding-left: 1vh;
+margin: 3.33%;
+}
+
+p {
+text-align: center;
+padding: none;
+font-size: 2vh;
+}
+    

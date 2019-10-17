@@ -25,7 +25,7 @@ class Cart extends Component {
       <div className="cartContainer">
         <aside>
           <div className="logo">
-            <i class="fas fa-shopping-cart fa-3x"></i>
+            <i className="fas fa-shopping-cart fa-3x"></i>
             <h2>Basket</h2>
           </div>
           {this.props.orders.map((order, index) => {
@@ -53,7 +53,6 @@ class Cards extends Component {
         <h3>
           Made with {this.props.order.milk} milk <br />
           <p>{this.props.order.decaf}</p>
-        
         </h3>
         <h2>1 @ £{this.props.order.price}</h2>
       </react-fragment>

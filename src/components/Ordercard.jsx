@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function Ordercard(props) {
   if (!props.card) return null;
 
