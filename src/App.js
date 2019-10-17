@@ -4,13 +4,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // compoonents
 import Navbar from "./components/navbar";
 import Footer from "./components/footer.jsx";
-import Cart from "./components/cart.jsx";
 
 // views
 import Home from "./components/Index";
 import Location from "./components/location";
 import Login from "./components/login";
-
 import BarristerView from "./components/BarristerView.jsx";
 import Spill from "./components/spill";
 import Loyalty from "./components/loyalty";
@@ -139,7 +137,7 @@ export default class App extends Component {
           <Route path="/barrista" component={BarristerView} />
 
           <Route path="/login" component={Login} />
-          
+
         </Switch>
 
         <Footer />

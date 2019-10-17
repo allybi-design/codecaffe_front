@@ -10,9 +10,9 @@ export default function Index(props) {
   return (
     <div className="main">
       <div className="coffeeCards">
-        {coffeeTypes.map(coffee => {
+        {coffeeTypes.map((coffee, index) => {
           return (
-            <CoffeeCards
+            <CoffeeCards key={index}
               data={coffee}
               clickSizePriceHandler={props.clickSizePriceHandler}
               clickDecafHandler={props.clickDecafHandler}
