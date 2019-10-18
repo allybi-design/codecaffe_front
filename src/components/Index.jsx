@@ -17,13 +17,15 @@ export default function Index(props) {
               clickSizePriceHandler={props.clickSizePriceHandler}
               clickDecafHandler={props.clickDecafHandler}
               clickMilkHandler={props.clickMilkHandler}
-              coffeeOrder={props.coffeeOrder}
-              onAddToCart={props.onAddToCart}
+              addToCart={props.addToCart}
             />
           );
         })}
       </div>
-      <Cart orders={props.orders} />
+      <Cart 
+        orders={props.orders} 
+        submitOrder={props.submitOrder}
+      />
     </div>
   );
 }

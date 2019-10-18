@@ -1,24 +1,8 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 import "../styles/cart.css";
 
 class Cart extends Component {
-  submitOrder = async order => {
-    await axios
-      .post("http://localhost:3000/postOrder", {
-        coffeeName: order.name,
-        coffeeSize: order.size,
-        coffeePrice: order.price,
-        caffeine: order.decaf,
-        milktype: order.milk
-      })
-      .then(res => {
-        console.log(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
 
   render() {
     return (
@@ -28,13 +12,15 @@ class Cart extends Component {
             <i className="fas fa-shopping-cart fa-3x"></i>
             <h2>Basket</h2>
           </div>
-          {this.props.orders.map((order, index) => {
-            return <Cards className="card" order={order} key={index} />;
-          })}
+          <div className="orderCards">
+            {this.props.orders.map((order, index) => {
+              return <Cards className="card" order={order} key={index} />;
+            })}
+          </div>
         </aside>
         <button
           className="confirmBtn"
-          onClick={() => this.submitOrder(this.props.orders[0])}
+          onClick={() => this.props.submitOrder(this.props.orders[0])}
         >
           Click Confirm for Order
         </button>

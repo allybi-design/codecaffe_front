@@ -141,7 +141,7 @@ const CoffeeTypes = props => {
         </div>
       </div>
 
-      <button className="cartBox" onClick={props.onAddToCart}>
+      <button className="cartBox" onClick={props.addToCart}>
         <span>Add to Order</span>
         <i className="fas fa-cart-plus fa-2x"></i>
       </button>

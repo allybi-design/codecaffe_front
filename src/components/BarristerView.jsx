@@ -12,12 +12,19 @@ export default class BarristerView extends Component {
     console.log("Did mount.");
     axios.get("http://localhost:3000/getOrders")
       .then(res => {
-        console.log(res.data);
         this.setState({
           orders: res.data
         })
       })
   };
+
+  delCoffee(id) {
+    console.log(`del item - ${id}`);
+    axios.delete(`http://localhost:3000/delOrder/${id}`)
+      .then(res => {
+        console.log(`order deleted`);
+      })
+  }
 
   render() {
     return (
@@ -43,7 +50,7 @@ export default class BarristerView extends Component {
                   <th>{order.coffeeSize}</th>
                   <th>{order.caffeine}</th>
                   <th>{order.milktype}</th>
-                  <th><i className="fas fa-times-circle"></i></th>
+                  <th><i className="fas fa-times-circle" onClick={()=> this.delCoffee(order.orderID)}></i></th>
                 </tr>
               )
             })

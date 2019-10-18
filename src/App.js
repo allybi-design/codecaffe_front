@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import axios from "axios";
 
 // compoonents
 import Navbar from "./components/navbar";
@@ -49,7 +50,7 @@ export default class App extends Component {
       size: "",
       price: 0,
       decaf: false,
-      milk: ""
+      milk: "No"
     }
   };
 
@@ -66,7 +67,6 @@ export default class App extends Component {
         price
       }
     });
-    console.log("I set Price/Name/Price State");
   };
 
   clickDecafHandler = decaf => {
@@ -89,7 +89,7 @@ export default class App extends Component {
     console.log("I set Decaf State");
   };
 
-  onAddToCart = () => {
+  addToCart = () => {
     this.setState({
       orders: [...this.state.orders, this.state.coffee]
     });
@@ -100,9 +100,35 @@ export default class App extends Component {
         size: "",
         price: 0,
         decaf: false,
-        milk: ""
+        milk: "No"
       }
     });
+  };
+
+  submitOrder = async order => {
+    await axios
+      .post("http://localhost:3000/postOrder", {
+        coffeeName: order.name,
+        coffeeSize: order.size,
+        coffeePrice: order.price,
+        caffeine: order.decaf,
+        milktype: order.milk
+      })
+      .then(res => {
+        this.setState({
+          coffee: {
+            name: "",
+            size: "",
+            price: 0,
+            decaf: false,
+            milk: "No"
+          },
+          orders: []
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   render() {
@@ -117,27 +143,26 @@ export default class App extends Component {
             path="/"
             render={() => (
               <Home
+                orders={this.state.orders}
                 clickSubmitHandler={this.clickSubmitHandler}
                 clickSizePriceHandler={this.clickSizePriceHandler}
                 clickDecafHandler={this.clickDecafHandler}
                 clickMilkHandler={this.clickMilkHandler}
-                onAddToCart={this.onAddToCart}
-                coffeeOrder={this.state.coffee}
-                orders={this.state.orders}
+                addToCart={this.addToCart}
+                submitOrder={this.submitOrder}
               />
             )}
           />
 
           <Route path="/loyalty" component={Loyalty} />
-          
+
           <Route path="/location" component={Location} />
-         
+
           <Route path="/spill" component={Spill} />
-          
+
           <Route path="/barrista" component={BarristerView} />
 
           <Route path="/login" component={Login} />
-
         </Switch>
 
         <Footer />

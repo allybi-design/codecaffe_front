@@ -18,6 +18,7 @@ img {
 }
 
 .coffeeDescription {
+  flex: 1 0 auto;
   text-align: center;
   font-style: italic;
 }
