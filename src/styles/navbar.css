@@ -8,14 +8,23 @@
           flex-direction: row;
   background-color: #6d1f37;
   border-bottom: 0.05rem solid lightgray;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding: 1rem;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+}
+
+.navbar .logo .logo_image {
+  width: 48px;
+  height: 48px;
+}
+
+.navbar .navbar_btn {
+  padding: 0 1rem;
 }
 /*# sourceMappingURL=navbar.css.map */

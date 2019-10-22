@@ -1,6 +1,6 @@
 import React from "react";
 
-import CoffeeCards from "./CoffeeTypes";
+import CoffeeCards from "./CoffeeCards";
 import Cart from "./cart";
 
 // import assets

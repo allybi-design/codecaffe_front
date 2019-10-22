@@ -1,46 +1,29 @@
+// import mods
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import axios from "axios";
 
-// compoonents
-import Navbar from "./components/navbar";
+// import compoonents
 import Footer from "./components/footer.jsx";
+import Navbar from "./components/navbar.jsx";
 
-// views
-import Home from "./components/Index";
-import Location from "./components/location";
-import Login from "./components/login";
-import BarristerView from "./components/BarristerView.jsx";
-import Spill from "./components/spill";
-import Loyalty from "./components/loyalty";
+//import click Handlers
+// import {
+//   clickSizePriceHandler,
+//   clickDecafHandler,
+//   clickMilkHandler
+// } from "./components/ClickHandlers";
 
-// styles
+// import views
+import Home from "./components/Home.jsx";
+import Location from "./components/location.jsx";
+import Login from "./components/login.jsx";
+import BaristaView from "./components/BaristaView.jsx";
+import Spill from "./components/spill.jsx";
+import Loyalty from "./components/loyalty.jsx";
+
+// import styles
 import "./styles/App.css";
-
-function NavLinks() {
-  return (
-    <nav className="navbar">
-      <Link id="navbar_btn" to="/">
-        Order a Coffee
-      </Link>
-      <Link className="navbar_btn" to="/loyalty">
-        Loyalty
-      </Link>
-      <Link className="navbar_btn" to="/location">
-        Location
-      </Link>
-      <Link className="navbar_btn" to="/spill">
-        Spill the Beans
-      </Link>
-      <Link className="navbar_btn" to="/barrista">
-        Barrista View
-      </Link>
-      <Link className="navbar_btn" to="/login">
-        Sign In / Register
-      </Link>
-    </nav>
-  );
-}
 
 export default class App extends Component {
   state = {
@@ -52,10 +35,6 @@ export default class App extends Component {
       decaf: false,
       milk: "No"
     }
-  };
-
-  clickSubmitHandler = () => {
-    console.log("I was clicked");
   };
 
   clickSizePriceHandler = (name, size, price) => {
@@ -135,7 +114,6 @@ export default class App extends Component {
     return (
       <Router>
         <Navbar />
-        <NavLinks />
 
         <Switch>
           <Route
@@ -144,7 +122,6 @@ export default class App extends Component {
             render={() => (
               <Home
                 orders={this.state.orders}
-                clickSubmitHandler={this.clickSubmitHandler}
                 clickSizePriceHandler={this.clickSizePriceHandler}
                 clickDecafHandler={this.clickDecafHandler}
                 clickMilkHandler={this.clickMilkHandler}
@@ -160,7 +137,7 @@ export default class App extends Component {
 
           <Route path="/spill" component={Spill} />
 
-          <Route path="/barrista" component={BarristerView} />
+          <Route path="/barrista" component={BaristaView} />
 
           <Route path="/login" component={Login} />
         </Switch>

@@ -1,28 +1,31 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import "../styles/BarristerView.css";
+import "../styles/BaristaView.css";
 
 export default class BarristerView extends Component {
   state = {
     orders: []
   };
 
-  componentDidMount() {
-    console.log("Did mount.");
+  getData = () => {
     axios.get("http://localhost:3000/getOrders")
       .then(res => {
         this.setState({
           orders: res.data
         })
       })
+  }
+
+  componentDidMount() {
+    this.getData()
   };
 
   delCoffee(id) {
     console.log(`del item - ${id}`);
     axios.delete(`http://localhost:3000/delOrder/${id}`)
       .then(res => {
-        console.log(`order deleted`);
+       this.getData()
       })
   }
 

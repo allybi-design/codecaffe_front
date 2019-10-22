@@ -3,9 +3,18 @@
   flex-direction: row;
   background-color: #6d1f37;
   border-bottom: 0.05rem solid lightgray;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding: 1rem;
   align-items: baseline;
+  .logo {
+    .logo_image {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .navbar_btn {
+    padding: 0 1rem;
+  }
 }
