@@ -19,6 +19,10 @@
           align-items: baseline;
 }
 
+.navbar .logo {
+  background-color: #fff;
+}
+
 .navbar .logo .logo_image {
   width: 48px;
   height: 48px;

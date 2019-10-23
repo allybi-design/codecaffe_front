@@ -6,8 +6,8 @@ class Cart extends Component {
 
   render() {
     return (
-      <div className="cartContainer">
-        <aside>
+      <aside className="cart">
+        <div className="orders"> 
           <div className="logo">
             <i className="fas fa-shopping-cart fa-3x"></i>
             <h2>Basket</h2>
@@ -17,14 +17,14 @@ class Cart extends Component {
               return <Cards className="card" order={order} key={index} />;
             })}
           </div>
-        </aside>
+        </div>
         <button
           className="confirmBtn"
           onClick={() => this.props.submitOrder(this.props.orders[0])}
-        >
+          >
           Click Confirm for Order
         </button>
-      </div>
+      </aside>
     );
   }
 }

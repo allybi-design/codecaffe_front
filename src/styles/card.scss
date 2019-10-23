@@ -1,20 +1,38 @@
-header {
-  font-size: 2rem;
-  color: #6d1f37;
-  text-align: center;
-  font-weight: bold;
-}
-.headerAndImage {
+#chooseCoffee {
   display: flex;
   flex-direction: column;
-}
-.imageContainer {
-  padding: 0.25rem;
-  text-align: center;
-}
-img {
-  border: 1px solid #000;
-  padding: 0.25rem;
+  .headerAndImage {
+    h1 {
+      font-size: 2rem;
+      color: #6d1f37;
+      text-align: center;
+      font-weight: bold;
+    }
+    .imageContainer {
+      padding: 0.25rem;
+      text-align: center;
+      img {
+        border: 1px solid #000;
+        padding: 0.25rem;
+      }
+    }
+  }
+  .coffeeDescription {
+    font-size: 16px;
+  }
+  .coffeeOptionsBox {
+    margin: 1rem 0;
+  }
+  .cartBox {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .coffeeDescription {
@@ -23,16 +41,16 @@ img {
   font-style: italic;
 }
 
-.chooseCoffee {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  background-color: #f4f3ef;
-  color: #404042;
-  border: 3px solid #404042;
-  padding: 1rem;
-  margin: 1rem;
-}
+// .chooseCoffee {
+//   display: flex;
+//   flex-direction: column;
+//   width: 30%;
+//   background-color: #f4f3ef;
+//   color: #404042;
+//   border: 3px solid #404042;
+//   padding: 1rem;
+//   margin: 1rem;
+// }
 
 .sizeOfCupBox,
 .caffeineBox,
@@ -43,27 +61,8 @@ img {
   display: flex;
   flex-direction: column;
 }
-.cartBox {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-}
-.cartBox span {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
 
-.coffeeOptionsBox {
-  margin: 1rem 0;
-}
-label {
-  color: #6d1f37;
-  padding: 0.2vh;
-  margin: none;
-  font-weight: bold;
-}
-.coffeeOptionsBox li {
+.cartBox .coffeeOptionsBox li {
   list-style-type: none;
 }
 .coffeeOptionsBox i {

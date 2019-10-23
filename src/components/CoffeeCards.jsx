@@ -1,79 +1,74 @@
 import React from "react";
 
-import "../styles/CoffeeTypes.css";
-
 const CoffeeTypes = props => {
-
   return (
-    <div className="chooseCoffee">
+    <div className="coffeecard">
       <div className="headerAndImage">
-        <header>{props.data.type}</header>
+        <h1>{props.data.type}</h1>
         <div className="imageContainer">
           <img src={"/images/" + props.data.image} alt="coffeeImage" />
         </div>
       </div>
 
-      <p className="coffeeDescription"> {props.data.description}</p>
+      <p className="coffeeDescription">{props.data.description}</p>
 
       <div className="coffeeOptionsBox">
-        <div className="sizeOfCupBox">
-          <label>Size</label>
-          <div className="coffeeIcons">
-            <div className="cupSize">
-              <i className="fas fa-coffee "></i>
-              <label>Small ({props.data.size[0]})</label>
-              <div>
-                <input
-                  name="sizeButton"
-                  type="radio"
-                  onChange={() =>
-                    props.clickSizePriceHandler(
-                      props.data.type,
-                      "Small",
-                      props.data.size[0]
-                    )
-                  }
-                />
-              </div>
+        <div className="options">
+          <h3>Size</h3>
+          <div className="cupSize">
+            <i className="fas fa-coffee "></i>
+            <h4>Small ({props.data.size[0]})</h4>
+            <div>
+              <input
+                name="sizeButton"
+                type="radio"
+                onChange={() =>
+                  props.clickSizePriceHandler(
+                    props.data.type,
+                    "Small",
+                    props.data.size[0]
+                  )
+                }
+              />
             </div>
-            <div className="cupSize">
-              <i className="fas fa-coffee fa-2x"></i>
-              <label>Medium ({props.data.size[1]})</label>
-              <div>
-                <input
-                  name="sizeButton"
-                  type="radio"
-                  onChange={() =>
-                    props.clickSizePriceHandler(
-                      props.data.type,
-                      "Medium",
-                      props.data.size[1]
-                    )
-                  }
-                />
-              </div>
+          </div>
+          <div className="cupSize">
+            <i className="fas fa-coffee fa-2x"></i>
+            <label>Medium ({props.data.size[1]})</label>
+            <div>
+              <input
+                name="sizeButton"
+                type="radio"
+                onChange={() =>
+                  props.clickSizePriceHandler(
+                    props.data.type,
+                    "Medium",
+                    props.data.size[1]
+                  )
+                }
+              />
             </div>
-            <div className="cupSize">
-              <i className="fas fa-coffee fa-3x"></i>
-              <label>Large ({props.data.size[2]})</label>
-              <div>
-                <input
-                  name="sizeButton"
-                  type="radio"
-                  onChange={() =>
-                    props.clickSizePriceHandler(
-                      props.data.type,
-                      "Large",
-                      props.data.size[2]
-                    )
-                  }
-                />
-              </div>
+          </div>
+          <div className="cupSize">
+            <i className="fas fa-coffee fa-3x"></i>
+            <span>Large ({props.data.size[2]})</span>
+            <div>
+              <input
+                name="sizeButton"
+                type="radio"
+                onChange={() =>
+                  props.clickSizePriceHandler(
+                    props.data.type,
+                    "Large",
+                    props.data.size[2]
+                  )
+                }
+              />
             </div>
           </div>
         </div>
 
-        <div className="caffeineBox">
+        <div className="options">
           <label>Decaf</label>
           <div className="coffeeIcons">
             <div className="">
@@ -90,7 +85,7 @@ const CoffeeTypes = props => {
           </div>
         </div>
 
-        <div className="milkTypeBox">
+        <div className="options">
           <label>Milk Options</label>
           <div className="coffeeIcons">
             <div className="milkType">

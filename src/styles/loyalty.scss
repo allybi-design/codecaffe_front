@@ -1,0 +1,16 @@
+.ccClub {
+ display: flex;
+ flex-direction: column;
+ h1, h2, h3, p {
+      align-self: center;
+ }
+ p {
+     font-size: 16px;
+ }
+ h1 {
+     text-decoration: underline;
+ }
+ .title {
+     font-family: Verdana, Geneva, Tahoma, sans-serif
+ }
+}
