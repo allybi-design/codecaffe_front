@@ -13,62 +13,64 @@ const CoffeeTypes = props => {
       <p className="coffeeDescription">{props.data.description}</p>
 
       <div className="coffeeOptionsBox">
-        <div className="options">
+        <div className="size">
           <h3>Size</h3>
-          <div className="cupSize">
-            <i className="fas fa-coffee "></i>
-            <h4>Small ({props.data.size[0]})</h4>
-            <div>
-              <input
-                name="sizeButton"
-                type="radio"
-                onChange={() =>
-                  props.clickSizePriceHandler(
-                    props.data.type,
-                    "Small",
-                    props.data.size[0]
-                  )
-                }
-              />
+          <div className="options">
+            <div className="cupSize">
+              <i className="fas fa-coffee "></i>
+              <div className="input">
+                <label>Small (£{props.data.size[0]})</label>
+                <input
+                  name="sizeButton"
+                  type="radio"
+                  onChange={() =>
+                    props.clickSizePriceHandler(
+                      props.data.type,
+                      "Small",
+                      props.data.size[0]
+                    )
+                  }
+                />
+              </div>
             </div>
-          </div>
-          <div className="cupSize">
-            <i className="fas fa-coffee fa-2x"></i>
-            <label>Medium ({props.data.size[1]})</label>
-            <div>
-              <input
-                name="sizeButton"
-                type="radio"
-                onChange={() =>
-                  props.clickSizePriceHandler(
-                    props.data.type,
-                    "Medium",
-                    props.data.size[1]
-                  )
-                }
-              />
+            <div className="cupSize">
+              <i className="fas fa-coffee fa-2x"></i>
+              <div className="input">
+                <label>Medium ({props.data.size[1]})</label>
+                <input
+                  name="sizeButton"
+                  type="radio"
+                  onChange={() =>
+                    props.clickSizePriceHandler(
+                      props.data.type,
+                      "Medium",
+                      props.data.size[1]
+                    )
+                  }
+                />
+              </div>
             </div>
-          </div>
-          <div className="cupSize">
-            <i className="fas fa-coffee fa-3x"></i>
-            <span>Large ({props.data.size[2]})</span>
-            <div>
-              <input
-                name="sizeButton"
-                type="radio"
-                onChange={() =>
-                  props.clickSizePriceHandler(
-                    props.data.type,
-                    "Large",
-                    props.data.size[2]
-                  )
-                }
-              />
+            <div className="cupSize">
+              <i className="fas fa-coffee fa-3x"></i>
+              <div className="input">
+                <label>Large ({props.data.size[2]})</label>
+                <input
+                  name="sizeButton"
+                  type="radio"
+                  onChange={() =>
+                    props.clickSizePriceHandler(
+                      props.data.type,
+                      "Large",
+                      props.data.size[2]
+                    )
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="options">
+        <div className="decaf">
           <label>Decaf</label>
           <div className="coffeeIcons">
             <div className="">
@@ -85,7 +87,7 @@ const CoffeeTypes = props => {
           </div>
         </div>
 
-        <div className="options">
+        <div className="milk">
           <label>Milk Options</label>
           <div className="coffeeIcons">
             <div className="milkType">

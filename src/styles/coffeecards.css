@@ -43,7 +43,6 @@
 }
 
 .coffeecard .coffeeOptionsBox {
-  margin: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +52,24 @@
           flex-direction: column;
 }
 
-.coffeecard .coffeeOptionsBox .options {
+.coffeecard .coffeeOptionsBox .decaf,
+.coffeecard .coffeeOptionsBox .size,
+.coffeecard .coffeeOptionsBox .milk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.coffeecard .coffeeOptionsBox .decaf .options,
+.coffeecard .coffeeOptionsBox .size .options,
+.coffeecard .coffeeOptionsBox .milk .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +79,9 @@
           flex-direction: row;
 }
 
-.coffeecard .coffeeOptionsBox .options .cupSize {
+.coffeecard .coffeeOptionsBox .decaf .options .cupSize,
+.coffeecard .coffeeOptionsBox .size .options .cupSize,
+.coffeecard .coffeeOptionsBox .milk .options .cupSize {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,6 +89,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.coffeecard .coffeeOptionsBox .decaf .options .cupSize .input,
+.coffeecard .coffeeOptionsBox .size .options .cupSize .input,
+.coffeecard .coffeeOptionsBox .milk .options .cupSize .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.25rem;
 }
 
 .coffeecard .cartBox {

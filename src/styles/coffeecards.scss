@@ -30,15 +30,31 @@
     font-style: italic;
   }
   .coffeeOptionsBox {
-    margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    .options {
+    .decaf,
+    .size,
+    .milk {
       display: flex;
-      flex-direction: row;
-      .cupSize {
+      flex-direction: column;
+      align-items: center;
+      .options {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        .cupSize {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 1rem;
+          .input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.25rem;
+          }
+        }
       }
     }
   }
