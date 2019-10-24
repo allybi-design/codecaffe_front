@@ -1,0 +1,31 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #6d1f36;
+  align-content: center;
+  width: 25%;
+  .orders {
+    display: flex;
+    flex-direction: column;
+    .logo {
+      align-self: center;
+      margin: 2rem 0;
+    }
+    .orderCards {
+      border: 1px solid #fff;
+      margin: 0.5rem 1rem;
+      padding: 0 0.5rem;
+    }
+  }
+  .confirmBtn {
+    background-color: #457d00;
+    border: 1px solid #000;
+    width: 100%;
+    padding: 0.75rem;
+    &::hover {
+      background-color: #386303;
+      border: 1px solid #000;
+    }
+  }
+}

@@ -12,14 +12,16 @@ const CoffeeTypes = props => {
 
       <p className="coffeeDescription">{props.data.description}</p>
 
-      <div className="coffeeOptionsBox">
+      <div className="optionsContainer">
+
         <div className="size">
           <h3>Size</h3>
           <div className="options">
-            <div className="cupSize">
+            <div className="option">
               <i className="fas fa-coffee "></i>
               <div className="input">
-                <label>Small (£{props.data.size[0]})</label>
+                <label>Small</label>
+                <label>(£{props.data.size[0]})</label>
                 <input
                   name="sizeButton"
                   type="radio"
@@ -33,10 +35,11 @@ const CoffeeTypes = props => {
                 />
               </div>
             </div>
-            <div className="cupSize">
+            <div className="option">
               <i className="fas fa-coffee fa-2x"></i>
               <div className="input">
-                <label>Medium ({props.data.size[1]})</label>
+                <label>Medium</label>
+                <label>£{props.data.size[1]})</label>
                 <input
                   name="sizeButton"
                   type="radio"
@@ -50,10 +53,11 @@ const CoffeeTypes = props => {
                 />
               </div>
             </div>
-            <div className="cupSize">
+            <div className="option">
               <i className="fas fa-coffee fa-3x"></i>
               <div className="input">
-                <label>Large ({props.data.size[2]})</label>
+                <label>Large</label>
+                <label>(£{props.data.size[2]})</label>
                 <input
                   name="sizeButton"
                   type="radio"
@@ -71,11 +75,11 @@ const CoffeeTypes = props => {
         </div>
 
         <div className="decaf">
-          <label>Decaf</label>
-          <div className="coffeeIcons">
-            <div className="">
+          <h3>Decaf</h3>
+          <div className="options">
+            <div className="option">
               <i className="fas fa-bed fa-2x"></i>
-              <div>
+              <div className="input">
                 <input
                   name="decafButton"
                   type="checkbox"
@@ -88,12 +92,12 @@ const CoffeeTypes = props => {
         </div>
 
         <div className="milk">
-          <label>Milk Options</label>
-          <div className="coffeeIcons">
-            <div className="milkType">
+          <h3>Milk Options</h3>
+          <div className="options">
+            <div className="option">
               <i className="fas fa-battery-full fa-2x"></i>
               <label>Full</label>
-              <div>
+              <div className="input">
                 <input
                   name="milkButton"
                   type="radio"
@@ -101,10 +105,10 @@ const CoffeeTypes = props => {
                 />
               </div>
             </div>
-            <div className="milkType">
+            <div className="option">
               <i className="fas fa-battery-half fa-2x"></i>
               <label>Semi</label>
-              <div>
+              <div className="input">
                 <input
                   name="milkButton"
                   type="radio"
@@ -112,21 +116,21 @@ const CoffeeTypes = props => {
                 />
               </div>
             </div>
-            <div className="milkType">
+            <div className="option">
               <i className="fas fa-bread-slice fa-2x"></i>
               <label>Oat</label>
-              <div>
+              <div className="input">
                 <input
                   name="milkButton"
-                  type="radio"
+                  type="radio" 
                   onChange={() => props.clickMilkHandler("Oat")}
                 />
               </div>
             </div>
-            <div className="milkType">
+            <div className="option">
               <i className="fas fa-seedling fa-2x"></i>
               <label>Soya</label>
-              <div>
+              <div className="input">
                 <input
                   name="milkButton"
                   type="radio"
